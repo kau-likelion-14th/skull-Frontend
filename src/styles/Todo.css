@@ -1,0 +1,275 @@
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(4px);
+    z-index: 999;
+}
+
+
+.modal-container {
+    width: 420px;
+    background: white;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-sizing: border-box;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.modal-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+
+.modal-section {
+    margin-bottom: 20px;
+}
+
+
+.modal-label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+
+.modal-categories {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 10px;
+}
+
+.modal-categoryitem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.modal-categoryitem.selected span {
+    font-weight: 700;
+}
+
+
+.input-wrapper {
+    width: 100%;
+}
+
+.text-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+    font-family: 'Paperlogy', sans-serif;
+}
+
+.text-input:focus {
+    border: 1px solid #6c7cff;
+}
+
+
+.routine-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: none;
+    border: none;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.routine-label {
+    font-size: 14px;
+    font-family: 'Paperlogy', sans-serif;
+}
+
+.routine-button {
+    font-size: 18px;
+    color: #888;
+}
+
+
+.modal-actions {
+    display: flex;
+    justify-content: center;  
+    gap: 15px;                
+    margin-top: 25px;
+}
+
+
+.leftbutton {
+    border: 1.5px solid #ff4d4f;
+    color: #ff4d4f;
+    background: white;
+    padding: 14px 35px;
+    border-radius: 12px;
+    font-family: 'Paperlogy', sans-serif;
+}
+
+.leftbutton:hover {
+    background: #fff1f0;
+}
+
+
+.rightbutton {
+    background: #5f6df5;  
+    color: white;
+    padding: 14px 35px;
+    border-radius: 12px;
+    font-family: 'Paperlogy', sans-serif;
+}
+
+.rightbutton:hover {
+    background: #5a6af0;
+}
+
+
+.leftbutton.disabled,
+.rightbutton.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 480px) {
+    .modal-container {
+        width: 90%;
+        padding: 25px;
+    }
+}
+
+.routine-header ~ .modal-section .modal-categories {
+    display: flex;
+    justify-content: center;  
+    gap: 30px;
+}
+
+
+.routine-header ~ .modal-section .modal-categoryitem {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+
+.routine-header ~ .modal-section .modal-categoryitem input {
+    margin: 0;
+}
+
+
+.routine-header ~ .modal-section .modal-categoryitem.on span {
+    color: #4f5df5;
+    font-weight: 600;
+}
+
+.date-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-input {
+    width: 150px;  
+    font-family: 'Paperlogy', sans-serif;
+}
+
+.date-initial {
+    margin-left: auto; 
+}
+
+.routine-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin-bottom: 20px;
+}
+
+.routine-title {
+    font-size: 20px;   
+    font-weight: 700;  
+    text-align: center;
+}
+
+.routine-close {
+    position: absolute;
+    left: 0;           
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.leftbutton2 {
+    width: 120px;
+    height: 45px;
+
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    color: #333;
+
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Paperlogy', sans-serif;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.leftbutton2:hover {
+    background: #eaeaea;
+}
+
+/* 저장 버튼 */
+.rightbutton {
+    width: 120px;
+    height: 45px;
+
+    background: #4f5df5;
+    color: white;
+    border: none;
+
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Paperlogy', sans-serif;
+
+    cursor: pointer;
+    transition: 0.2s;
+
+    box-shadow: 0 4px 10px rgba(79,93,245,0.3);
+}
+
+.date-input {
+    width: 160px;
+    padding: 10px 12px;
+
+    border-radius: 10px;
+    border: none;              
+    background: #f5f5f5;    
+
+    font-size: 14px;
+    font-family: 'Paperlogy', sans-serif;
+
+    outline: none;
+}
