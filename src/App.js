@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import MainPage from './pages/MainPage/MainPage';
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
+import MyPage from './pages/MainPage/MyPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className="content">
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </div>
 
