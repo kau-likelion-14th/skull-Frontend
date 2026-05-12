@@ -1,0 +1,20 @@
+.friend-todo {
+    font-family: 'Paperlogy', sans-serif;
+  width: 100%;
+}
+
+.friend-todo .todo-item {
+    font-family: 'Paperlogy', sans-serif;
+  cursor: default;
+}
+
+.friend-todo .checkbox {
+    font-family: 'Paperlogy', sans-serif;
+  pointer-events: none;
+}
+
+.friend-todo__empty {
+  font-size: 14px;
+  color: #8f8f8f;
+  padding: 8px 0;
+}
