@@ -74,3 +74,34 @@
   background: #f1f1f1;
   border: 2px solid #0A84FF;
 }
+
+.calendar-container .react-calendar__tile {
+    position: relative;
+}
+
+.calendar-container .tile-meta {
+    position: absolute;
+
+    bottom: 10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #666;
+
+    z-index: 2;
+}
+
+.calendar-container .react-calendar__tile--active .tile-meta {
+    color: #ffffff;
+}
