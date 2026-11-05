@@ -18,6 +18,13 @@ const config = {
         SEARCH: "/api/follow/search",
         CREATE: "/api/follow",
     },
+
+    PROFILE: {
+        GET: "/api/profile",
+        PUT: "/api/profile",
+        DELETE:"/api/profile",
+        INTRO:"/api/profile/intro",
+    },
 };
 
 export default config;
