@@ -25,6 +25,15 @@ const config = {
         DELETE:"/api/profile",
         INTRO:"/api/profile/intro",
     },
+
+    MAIN: {
+        CALENDAR: "/api/todos/calendar",
+        TODOS: "/api/todos",
+        CATEGORIES: "/api/categories",
+
+        TOGGLE_COMPLETE: (todoId, date) =>
+            `/api/todos/${todoId}/dates/${date}/complete`,
+    },
 };
 
 export default config;
