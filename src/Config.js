@@ -8,6 +8,16 @@ const config = {
         WITHDRAW: "/api/auth/withdraw",
     },
 
+    FOLLOW: {
+        PROFILE: (id) => `/api/follow/${encodeURIComponent(id)}`,
+        TODOS: (id) => `/api/follow/${encodeURIComponent(id)}/todos`,
+        CALENDAR: (id) => `/api/follow/${encodeURIComponent(id)}/calendar`,
+        FOLLOWINGS: "/api/follow/followings",
+        DELETE: "/api/follow",
+        AVAILABLE: "/api/follow",
+        SEARCH: "/api/follow/search",
+        CREATE: "/api/follow",
+    },
 };
 
 export default config;

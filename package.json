@@ -1,4 +1,6 @@
 {
+
+  "proxy": "http://lte-dev-env.eba-4n3s4jnz.ap-northeast-2.elasticbeanstalk.com",
   "name": "skull-frontend",
   "version": "0.1.0",
   "private": true,
