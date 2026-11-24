@@ -1,0 +1,73 @@
+/* 통계 전체 영역 */
+.status {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    margin-top: 48px;
+    margin-bottom: 40px;
+    font-family: 'Paperlogy', sans-serif;
+    box-sizing: border-box;
+}
+
+/* 공통 카드 디자인 */
+.status > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 28px;
+    min-height: 150px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* 연속 달성일 */
+.status > :nth-child(1) {
+    background-color: #FFF5EC;
+    border: 1px solid #F5E5D7;
+}
+
+/* 최근 30일 달성률 */
+.status > :nth-child(2) {
+    background-color: #F2F0FF;
+    border: 1px solid #E4DFFF;
+}
+
+/* 가장 많이 완료한 요일 */
+.status > :nth-child(3) {
+    background-color: #EDF7F2;
+    border: 1px solid #DCEDE4;
+}
+
+/* 마우스를 올렸을 때 */
+.status > *:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .status {
+        gap: 16px;
+    }
+
+    .status > * {
+        padding: 20px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+    .status {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    .status > * {
+        min-height: 130px;
+    }
+}
