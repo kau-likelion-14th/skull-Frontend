@@ -34,6 +34,16 @@ const config = {
         TOGGLE_COMPLETE: (todoId, date) =>
             `/api/todos/${todoId}/dates/${date}/complete`,
     },
+
+    STATISTICS:{
+        GET:"/api/statistic",
+    },
+
+    YOUTUBE:{
+        SEARCH:"/api/youtube/search",
+        SAVE: "/api/youtube/save",
+        ME: "/api/youtube/me",
+    },
 };
 
 export default config;
