@@ -4,6 +4,8 @@
     width: 440px;
 }
 
+/* 캘린더 상단 */
+
 .calendar-container
 .react-calendar__navigation
 .react-calendar__navigation__label {
@@ -22,6 +24,8 @@
     font-weight: 900;
     color: #333333;
 }
+
+/* 요일 */
 
 .calendar-container .react-calendar__month-view__weekdays {
     font-size: 22px;
@@ -42,6 +46,8 @@
     color: #0A84FF;
 }
 
+/* 날짜 영역 */
+
 .calendar-container .react-calendar__month-view__days {
     row-gap: 10px;
     font-size: 16px;
@@ -50,6 +56,7 @@
 .calendar-container .react-calendar__tile {
     height: 80px;
     border-radius: 15px;
+    position: relative;
 }
 
 .calendar-container .react-calendar__tile::after {
@@ -62,32 +69,58 @@
     border-radius: 8px;
 }
 
+/* 이전 달 및 다음 달 날짜 */
+
 .calendar-container .react-calendar__month-view__days__day--neighboringMonth abbr {
     color: #8f8f8f;
 }
 
-.calendar-container .react-calendar__tile--now {
-    background: transparent;
+/* 오늘 날짜: 선택되지 않은 상태 */
+
+.calendar-container .react-calendar__tile--now:not(.react-calendar__tile--active) {
+    background: transparent !important;
+    color: #000000 !important;
 }
 
-/* 추가: 오늘 날짜를 선택하지 않았을 때 검정색 */
 .calendar-container .react-calendar__tile--now:not(.react-calendar__tile--active) abbr {
-    color: #000000;
+    color: #000000 !important;
 }
 
-/* 추가: 날짜를 선택했을 때 흰색 */
-.calendar-container .react-calendar__tile--active abbr {
-    color: #ffffff;
-}
+/* 오늘 날짜의 파란색 테두리 */
 
 .calendar-container .react-calendar__tile--now::after {
     background: #f1f1f1;
     border: 2px solid #0A84FF;
+    box-sizing: border-box;
 }
 
-.calendar-container .react-calendar__tile {
-    position: relative;
+/* 선택된 날짜: 파란색 배경 + 흰색 글자 */
+
+.calendar-container .react-calendar__tile--active {
+    background: #5680F5 !important;
+    color: #ffffff !important;
 }
+
+.calendar-container .react-calendar__tile--active abbr {
+    color: #ffffff !important;
+}
+
+/* 오늘 날짜가 선택된 경우 */
+
+.calendar-container .react-calendar__tile--now.react-calendar__tile--active {
+    background: #5680F5 !important;
+    color: #ffffff !important;
+}
+
+.calendar-container .react-calendar__tile--now.react-calendar__tile--active abbr {
+    color: #ffffff !important;
+}
+
+.calendar-container .react-calendar__tile--now.react-calendar__tile--active::after {
+    border: none;
+}
+
+/* Todo 개수 및 별표 */
 
 .calendar-container .tile-meta {
     position: absolute;
@@ -107,28 +140,13 @@
     font-size: 14px;
     font-weight: 700;
 
-    color: #666;
+    color: #666666;
 
     z-index: 2;
 }
 
-.calendar-container .react-calendar__tile--active .tile-meta {
-    color: #ffffff;
-}
+/* 선택된 날짜에서도 Todo 개수가 잘 보이도록 */
 
-/* 오늘 날짜를 선택하지 않았을 때 */
-.calendar-container .react-calendar__tile--now:not(.react-calendar__tile--active),
-.calendar-container .react-calendar__tile--now:not(.react-calendar__tile--active) abbr {
-    color: #000000 !important;
-    background: transparent;
-}
-
-/* 날짜를 선택했을 때 */
-.calendar-container .react-calendar__tile--active abbr {
-    color: #ffffff !important;
-}
-
-/* 선택한 날짜의 Todo 개수 및 별표 색상 */
 .calendar-container .react-calendar__tile--active .tile-meta {
     color: #666666 !important;
 }
