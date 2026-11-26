@@ -115,3 +115,20 @@
 .calendar-container .react-calendar__tile--active .tile-meta {
     color: #ffffff;
 }
+
+/* 오늘 날짜를 선택하지 않았을 때 */
+.calendar-container .react-calendar__tile--now:not(.react-calendar__tile--active),
+.calendar-container .react-calendar__tile--now:not(.react-calendar__tile--active) abbr {
+    color: #000000 !important;
+    background: transparent;
+}
+
+/* 날짜를 선택했을 때 */
+.calendar-container .react-calendar__tile--active abbr {
+    color: #ffffff !important;
+}
+
+/* 선택한 날짜의 Todo 개수 및 별표 색상 */
+.calendar-container .react-calendar__tile--active .tile-meta {
+    color: #666666 !important;
+}
