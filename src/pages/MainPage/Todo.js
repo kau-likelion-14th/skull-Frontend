@@ -276,7 +276,8 @@ const Todo = ({
                     onClick={openModal}
                     disabled={isSaving}
                 >
-                    +
+                <span className="todo-add-icon">+</span>
+                <span>할 일 추가</span>
                 </button>
             </div>
 

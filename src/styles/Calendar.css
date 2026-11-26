@@ -7,10 +7,10 @@
 .calendar-container
 .react-calendar__navigation
 .react-calendar__navigation__label {
-  font-size: 28px;
-  font-weight: bold;
-  font-family: "Paperlogy", sans-serif;
-  color: #333333;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Paperlogy", sans-serif;
+    color: #333333;
 }
 
 .calendar-container .react-calendar__navigation {
@@ -31,7 +31,7 @@
 }
 
 .calendar-container .react-calendar__month-view__weekdays abbr {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .calendar-container .react-calendar__month-view__weekdays__weekday:first-child {
@@ -53,26 +53,36 @@
 }
 
 .calendar-container .react-calendar__tile::after {
-  content: "";
-  display: block;
-  width: 34px;
-  height: 34px;
-  margin: 10px auto 0;
-  background: #f1f1f1;
-  border-radius: 8px;
+    content: "";
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 10px auto 0;
+    background: #f1f1f1;
+    border-radius: 8px;
 }
 
 .calendar-container .react-calendar__month-view__days__day--neighboringMonth abbr {
-  color: #8f8f8f;
+    color: #8f8f8f;
 }
 
-.calendar-container .react-calendar__tile--now { 
-  background: transparent;
+.calendar-container .react-calendar__tile--now {
+    background: transparent;
+}
+
+/* 추가: 오늘 날짜를 선택하지 않았을 때 검정색 */
+.calendar-container .react-calendar__tile--now:not(.react-calendar__tile--active) abbr {
+    color: #000000;
+}
+
+/* 추가: 날짜를 선택했을 때 흰색 */
+.calendar-container .react-calendar__tile--active abbr {
+    color: #ffffff;
 }
 
 .calendar-container .react-calendar__tile--now::after {
-  background: #f1f1f1;
-  border: 2px solid #0A84FF;
+    background: #f1f1f1;
+    border: 2px solid #0A84FF;
 }
 
 .calendar-container .react-calendar__tile {
