@@ -1,307 +1,124 @@
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    backdrop-filter: blur(4px);
-    z-index: 999;
-}
-
-
-.modal-container {
-    width: 420px;
-    background: white;
-    border-radius: 20px;
-    padding: 35px 30px;
-    box-sizing: border-box;
-
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-
-.modal-title {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 25px;
-}
-
-
-.modal-section {
-    margin-bottom: 20px;
-}
-
-
-.modal-label {
-    font-size: 16px;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-
-.modal-categories {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-top: 10px;
-}
-
-.modal-categoryitem {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 6px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.modal-categoryitem.selected span {
-    font-weight: 700;
-}
-
-
-.input-wrapper {
-    width: 100%;
-}
-
-.text-input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-    outline: none;
-    transition: 0.2s;
-    font-family: 'Paperlogy', sans-serif;
-}
-
-.text-input:focus {
-    border: 1px solid #6c7cff;
-}
-
-
-.routine-row {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: none;
-    border: none;
-    padding: 12px 0;
-    cursor: pointer;
-}
-
-.routine-label {
-    font-size: 14px;
-    font-family: 'Paperlogy', sans-serif;
-}
-
-.routine-button {
-    font-size: 18px;
-    color: #888;
-}
-
-
-.modal-actions {
-    display: flex;
-    justify-content: center;  
-    gap: 15px;                
-    margin-top: 25px;
-}
-
-
-.leftbutton {
-    border: 1.5px solid #ff4d4f;
-    color: #ff4d4f;
-    background: white;
-    padding: 14px 35px;
-    border-radius: 12px;
-    font-family: 'Paperlogy', sans-serif;
-}
-
-.leftbutton:hover {
-    background: #fff1f0;
-}
-
-
-.rightbutton {
-    background: #5f6df5;  
-    color: white;
-    padding: 14px 35px;
-    border-radius: 12px;
-    font-family: 'Paperlogy', sans-serif;
-}
-
-.rightbutton:hover {
-    background: #5a6af0;
-}
-
-
-.leftbutton.disabled,
-.rightbutton.disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-}
-
-
-@media (max-width: 480px) {
-    .modal-container {
-        width: 90%;
-        padding: 25px;
-    }
-}
-
-.routine-header ~ .modal-section .modal-categories {
-    display: flex;
-    justify-content: center;  
-    gap: 30px;
-}
-
-
-.routine-header ~ .modal-section .modal-categoryitem {
-    display: flex;
-    flex-direction: column;   
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
-}
-
-
-.routine-header ~ .modal-section .modal-categoryitem input {
-    margin: 0;
-}
-
-
-.routine-header ~ .modal-section .modal-categoryitem.on span {
-    color: #4f5df5;
-    font-weight: 600;
-}
-
-.date-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.date-input {
-    width: 150px;  
-    font-family: 'Paperlogy', sans-serif;
-}
-
-.date-initial {
-    margin-left: auto; 
-}
-
-.routine-header {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    margin-bottom: 20px;
-}
-
-.routine-title {
-    font-size: 20px;   
-    font-weight: 700;  
-    text-align: center;
-}
-
-.routine-close {
-    position: absolute;
-    left: 0;           
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.leftbutton2 {
-    width: 120px;
-    height: 45px;
-
-    border: 1px solid #ddd;
-    background: #f5f5f5;
-    color: #333;
-
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: 'Paperlogy', sans-serif;
-
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.leftbutton2:hover {
-    background: #eaeaea;
-}
-
-
-.rightbutton {
-    width: 120px;
-    height: 45px;
-
-    background: #4f5df5;
-    color: white;
-    border: none;
-
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: 'Paperlogy', sans-serif;
-
-    cursor: pointer;
-    transition: 0.2s;
-
-    box-shadow: 0 4px 10px rgba(79,93,245,0.3);
-}
-
-.date-input {
-    width: 160px;
-    padding: 10px 12px;
-
-    border-radius: 10px;
-    border: none;              
-    background: #f5f5f5;    
-
-    
-    font-size: 14px;
-    font-family: 'Paperlogy', sans-serif;
-
-    outline: none;
-}
-
-
 .todo-container {
     width: 100%;
 }
 
+/* =========================
+   Todo 헤더
+========================= */
+
 .todo-header {
-    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
 }
 
 .todo-title {
     font-size: 28px;
     font-weight: 800;
     color: #2d2d2d;
+    line-height: 1.2;
+}
+
+/* =========================
+   할 일 추가 버튼
+========================= */
+
+.todo-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    background: #E5F3ED;
+    color: #376C56;
+
+    border: none;
+    border-radius: 12px;
+
+    font-family: 'Paperlogy', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.todo-add-icon {
+    font-size: 22px;
+    font-weight: 500;
     line-height: 1;
 }
+
+.todo-add:hover {
+    background: #D4EAE0;
+    transform: translateY(-2px);
+}
+
+.todo-add:active {
+    transform: translateY(0);
+}
+
+.todo-add:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================
+   Todo 목록
+========================= */
 
 .todo-list {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
 }
+
+/* =========================
+   개별 Todo 카드
+========================= */
 
 .todo-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
 
     width: 100%;
+    min-height: 76px;
+    padding: 16px 18px;
+
+    background: #ffffff;
+    border: 1px solid #E4E8E6;
+    border-radius: 16px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.035);
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+    background: #FCFEFD;
+    border-color: #BFD8CC;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+
+    transform: translateY(-2px);
+}
+
+/* 완료된 Todo 카드 */
+
+.todo-item.done {
+    background: #F8FAF9;
+    border-color: #E8ECEA;
 }
 
 .todo-left {
@@ -310,21 +127,35 @@
     gap: 14px;
 }
 
-.checkbox {
-    width: 20px;
-    height: 20px;
+/* =========================
+   완료 체크 버튼
+========================= */
 
+.checkbox {
+    width: 22px;
+    height: 22px;
+
+    padding: 0;
+
+    border: 1.5px solid #C9D1CE;
     border-radius: 50%;
 
-    background: #e8e8e8;
+    background: #F4F5F5;
 
     position: relative;
-
     flex-shrink: 0;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checkbox:hover {
+    border-color: #5B7CFF;
 }
 
 .checkbox.checked {
-    background: #5b7cff;
+    background: #5B7CFF;
+    border-color: #5B7CFF;
 }
 
 .checkbox.checked::after {
@@ -337,23 +168,44 @@
     transform: translate(-50%, -52%);
 
     color: white;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
 }
 
+.checkbox:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* =========================
+   Todo 내용
+========================= */
+
 .todo-text {
+    flex: 1;
+    min-width: 0;
+
     font-size: 16px;
     font-weight: 500;
-    color: #333;
+    line-height: 1.5;
+
+    color: #333333;
+
+    overflow-wrap: anywhere;
 }
 
 .todo-item.done .todo-text {
-    color: #8f8f8f;
+    color: #999999;
+    text-decoration: line-through;
 }
+
+/* =========================
+   카테고리
+========================= */
 
 .todo-category {
     min-width: 78px;
-    height: 36px;
+    height: 34px;
 
     display: flex;
     align-items: center;
@@ -361,10 +213,47 @@
 
     border-radius: 999px;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
 
-    padding: 0 16px;
+    padding: 0 14px;
 
     box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+/* =========================
+   모바일 반응형
+========================= */
+
+@media (max-width: 480px) {
+    .todo-header {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .todo-title {
+        font-size: 24px;
+    }
+
+    .todo-add {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .todo-item {
+        min-height: 68px;
+        padding: 14px 12px;
+        gap: 10px;
+    }
+
+    .todo-text {
+        font-size: 14px;
+    }
+
+    .todo-category {
+        min-width: 64px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
 }
